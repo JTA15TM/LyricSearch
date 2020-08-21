@@ -1,0 +1,11 @@
+{
+    "client_id":"YGO_iCoF8Aeo1ADwGbxaYlsnWeTxbxyg_jrkY771g04hWtAwBAOHkc84gVQ29M12",
+    "client_secret":"1knSTDKOWDWXq0GLzCEzj-141VJcjZr3oRaF9AE4kSNavJt2TW_boPK4MwZUx4u6GWwLuL8bV3vzjLG1pPwrzA",
+    "client_access_token":"P42LBZidZ6DoIG9foUurASVVKLPJiTYsPsCpt39jNuyRB_7mpOwYeXhbzc3HVj8N",
+    "redirect_uri":"https://jta15tm.github.io/LyricSearch/redirect.html",
+    "scopes":[
+        {"scope":"me"}
+    ],
+    "state":"0823",
+    "response_type":"code"
+}
