@@ -5,6 +5,13 @@
     <body>
         <script>
             var url = window.location.href;
+            var json = getJSON(url, function(err, data) {
+  if (err !== null) {
+    alert('Something went wrong: ' + err);
+  } else {
+    alert(data);
+  }
+});
             document.getElementsByTagName("html")[0].innerText = url;
         </script>
     </body>
