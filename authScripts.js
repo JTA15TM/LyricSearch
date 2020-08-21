@@ -42,7 +42,11 @@ onSuccessLoading = function(response)
     for(var i = 0; i < item.scopes.length; i++)
     {
         scopes += item.scopes[i].scope;
+        if(i < item.scopes.length - 1)
+        {
+            scopes += ",";
+        }
     }
-    alert(scopes);
     var link = "https://api.genius.com/oauth/authorize?client_id=" + item.client_id + "&redirect_uri=" + item.redirect_uri + "&scope=" + scopes + "&state=" + item.state + "&response_type=" + item.response_type;
+    window.location.href = link;
 }
