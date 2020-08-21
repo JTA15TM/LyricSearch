@@ -41,7 +41,7 @@ onSuccessLoading = function(response)
     var scopes = "";
     for(var i = 0; i < item.scopes.length; i++)
     {
-        scopes += item.scopes.scope;
+        scopes += item.scopes[i].scope;
     }
     alert(scopes);
     var link = "https://api.genius.com/oauth/authorize?client_id=" + item.client_id + "&redirect_uri=" + item.redirect_uri + "&scope=" + scopes + "&state=" + item.state + "&response_type=" + item.response_type;
