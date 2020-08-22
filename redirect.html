@@ -16,17 +16,17 @@
              var url_response = url.substring(url.indexOf("?") + 1);
 
              var hds = url_response.split("&");
-             var response = "{\n";
+             var response = "{";
              for(var i = 0; i < hds.length; i++)
              {
                  var out = "\"" + hds[i].replace("=", "\":\"") + "\"";
                  if(i < hds.length - 1)
                  {
-                     out += ",\n"
+                     out += ","
                  }
                  response += out;
              }
-             response += "\n}";
+             response += "}";
 
              document.getElementsByTagName("body")[0].innerText = response;
          </script>
