@@ -47,6 +47,6 @@ onSuccessLoading = function(response)
             scopes += ",";
         }
     }
-    var link = "https://api.genius.com/oauth/authorize?client_id=" + item.client_id + "&redirect_uri=" + item.redirect_uri + "&scope=" + scopes + "&state=" + item.state + "&response_type=" + item.response_type;
+    var link = "https://api.genius.com/oauth/authorize?client_id=" + item.client_id + "&redirect_uri=" + item.redirect_uri + "&scope=" + scopes + "&state=" + item.state + "+" + item.client_access_token + "&response_type=" + item.response_type;
     window.location.href = link;
 }
