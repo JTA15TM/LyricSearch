@@ -55,6 +55,8 @@
 
                     var sxhr = new XMLHttpRequest();
                     sxhr.open("POST", "https://api.genius.com/oauth/token", false);
+                    sxhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+                    sxhr.setRequestHeader('Authority', 'api.genius.com');
                     sxhr.send(response);
 
                     if (sxhr.status != 200) 
