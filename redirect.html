@@ -53,7 +53,20 @@
 
                     response += "}";
 
-                    document.getElementsByTagName("body")[0].innerText = response;
+                    var sxhr = new XMLHttpRequest();
+                    sxhr.open("POST", "https://api.genius.com/oauth/token", false);
+                    sxhr.send(response);
+
+                    if (sxhr.status != 200) 
+                    {
+                        document.getElementsByTagName("body")[0].innerText = sxhr.responseText;
+                    }
+                    else
+                    {
+                        var t = "{\"error\":\"network_denided\"}";
+                        document.getElementsByTagName("body")[0].innerText = t;
+                    }
+                    
                 }
              }
              xhr.send(null);
